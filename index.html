@@ -1,8 +1,5 @@
 <!doctype html>
-<?php
-    $place = 'latitude: 35.784223110391; longitude: 139.67906111159;';
-    echo $place;
-?>
+
 <html>
     <head>
         <meta charset="utf-8" />
@@ -22,7 +19,7 @@
                     src="assets/asset.jpeg"
                     look-at="[gps-camera]"
                     scale="1 1 1"
-                    gps-entity-place=<?php $place ?>
+                    gps-entity-place='latitude: 35.784223110391; longitude: 139.67906111159;'
                 ></a-image>
 
             <a-camera gps-camera rotation-reader></a-camera>
