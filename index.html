@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+        <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
         <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
         <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
     </head>
@@ -21,7 +21,7 @@
             embedded
             loading-screen="enabled: false;"
             vr-mode-ui="enabled: false"
-            arjs="sourceType: webcam; debugUIEnabled: false;"
+            arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;"
             cursor='rayOrigin: mouse'
         >
                 <a-image
@@ -29,7 +29,7 @@
                     src="assets/asset.jpeg"
                     look-at="[gps-camera]"
                     scale="50 50 50"
-                    gps-new-entity-place='latitude: 35.784223110391; longitude: 139.67906111159;'
+                    gps-entity-place='latitude: 35.784223110391; longitude: 139.67906111159;'
                     clickhandler
                 ></a-image>
 
@@ -38,7 +38,7 @@
         <script>
             var place = 'latitude: 35.784223110391; longitude: 139.67906111159;';
             var image = document.getElementById("marker");
-            //image.gps-new-entity-place = place;
+            //image.gps-entity-place = place;
         </script>
     </body>
 </html>
