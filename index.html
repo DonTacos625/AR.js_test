@@ -1,15 +1,20 @@
-<!doctype html>
 <!DOCTYPE html>
 <html>
     <head>
         <title>AR.js A-Frame Location-based</title>
-        <script src="https://aframe.io/releases/1.4.1/aframe.min.js"></script>
+        <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
         <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
         <script src='https://raw.githack.com/AR-js-org/AR.js/master/three.js/build/ar-threex-location-only.js'></script>
         <script src='https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js'></script>
 
-        <script src="./js/aframe-html-shader.min.js"></script>
-        <script src="./js/html2canvas.min.js"></script>
+      
+        <script src="https://unpkg.com/aframe-html-shader@0.2.0/dist/aframe-html-shader.min.js"></script>
+        <script src="http://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+      
+        <script src="html2canvas.min.js"></script>
+        <script src="aframe-html-shader.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+
     </head>
     <script>
         AFRAME.registerComponent('click', {
@@ -34,12 +39,41 @@
         }});
     </script>
     <body>
+      
+      <div id="target1" class="target">
+      <img src="https://imgfp.hotp.jp/IMGH/01/61/P041190161/P041190161_238.jpg" alt="A-Frame">
+      <div class="cf"><h3>A-Frame</h3>
+      <p>A-Frameは簡単にWeb VRが実現できるフレームワークです。</p></div>
+      <p class="detail">320px × 200px</p>
+      </div>
+      <div id="test">
+        <p>test</p>
+      </div>
+      
             <a-scene vr-mode-ui='enabled: false' arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true' cursor='rayOrigin: mouse'>
             <a-camera gps-new-camera='gpsMinDistance: 5'></a-camera>
+            
+            <a-entity 
+                      click
+                      data-text="西台駅" 
+                      look-at="[gps-new-camera]" 
+                      gps-new-entity-place="latitude: 35.786166447091; longitude: 139.67492026079;" 
+                      scale="10 10 10">
+            <a-plane 
+                       position="0 0 0"  
+                       width="8" 
+                       height="5"
+                       material="shader:html;target: #target1;"
+                       look-at="[gps-new-camera]"
+                       >
+            </a-plane></a-entity>
+              
+
             <a-entity click data-text="西台駅" id='nishidai' material='color: blue' geometry='primitive: box' gps-new-entity-place="latitude: 35.787063624636; longitude: 139.67287952337;" scale="100 100 100"></a-entity>
 
             <a-entity click data-text="蓮根駅" look-at="[gps-new-camera]" mb-text gps-new-entity-place="latitude: 35.784223110391; longitude: 139.67906111159;" scale="40 40 40"></a-entity>
             <a-entity click data-text="高島平駅" look-at="[gps-new-camera]" mb-text gps-new-entity-place="latitude: 35.7889291031; longitude: 139.6612484385;" scale="40 40 40"></a-entity>
+            
             <a-entity 
                       click
                       data-text="すき屋 蓮根駅前店"
@@ -60,11 +94,34 @@
             <a-entity click data-text="電通大" material='color: green' geometry='primitive: sphere' gps-new-entity-place="latitude: 35.6577007; longitude: 139.5465039;" scale="100 100 100"></a-entity>
             <a-entity 
                       click 
-                      data-text="調布駅" 
+                      data-text="調布駅"
                       look-at="[gps-new-camera]" 
                       material='color: red' 
                       mb-text gps-new-entity-place="latitude: 35.651820534474; longitude: 139.54461236426;" 
-                      scale="100 100 100"></a-entity>
+                      scale="100 100 100">
+            　<a-image
+                        src="https://cdn.glitch.global/3acb31b7-c45b-47f0-8eb6-beb5723e638a/uec_mark.png?v=1687853300605"
+                        height="5"
+                        width="4.5"
+                        position="-4.5 -2 -4"
+                        rotation="0 0 0"
+                        >
+              </a-image></a-entity>
+              
+              <a-entity 
+                      text="value: Hello World;"
+                      look-at="[gps-new-camera]" 
+                      gps-new-entity-place="latitude: 35.651820534474; longitude: 139.54461236426;" 
+                      scale="100 100 100"
+                      >
+            　<a-image
+                        src="https://cdn.glitch.global/3acb31b7-c45b-47f0-8eb6-beb5723e638a/uec_mark.png?v=1687853300605"
+                        height="5"
+                        width="4.5"
+                        position="-4.5 -2 -4"
+                        rotation="0 0 0"
+                        >
+              </a-image></a-entity>
         </a-scene>
     </body>
 </html>
