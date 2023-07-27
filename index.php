@@ -1,7 +1,6 @@
 <?php 
   //include_once("index.html"); 
 ?>
-<!DOCTYPE html>
 <html>
     <head>
         <title>AR.js A-Frame Location-based</title>
