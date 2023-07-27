@@ -144,7 +144,7 @@
             
             <a-entity 
                       click
-                      data-text="すき屋 蓮根駅前店"
+                      data-text="すすき屋 蓮根駅前店"
                       look-at="[gps-new-camera]"
                       mb-text
                       gps-new-entity-place="latitude: 35.7853948; longitude: 139.6763982;"
