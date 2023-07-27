@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+	<h1>JavaScriptレシピ</h1>
+	<article id="textbox">
+		<p>このエリアにHTML要素を追加する</p>
+	</article>
+</body>
+
+<script>
+//min[501,1001,1501,2001,3001,4001,5001,7001,10001,15001,20001,30001]
+//max[500,1000,1500,2000,3000,4000,5000,7000,10000,15000,20000,30000]
+var answer='×';
+var DB = [5001,7000]; //[min,max],1000~2000
+//var DB = [999999,7000]; //[minなし,max],~2000
+//var DB = [5000,0]; //[min,maxなし],1000~
+var input = [5001,10000]; //[min,max]、指定なしの場合[0,999999]
+
+if(input[0] <= DB[0] && input[1] >= DB[1] ){
+    answer = '〇';
+}
+
+
+let div_element = document.createElement('div');
+var li_element = document.createElement('li');
+li_element.textContent = answer;
+div_element.appendChild(li_element);
+
+// 作成したHTML要素をarticle要素に追加する
+let textbox = document.getElementById('textbox');
+textbox.appendChild(div_element);
+</script>
+
+</html>
