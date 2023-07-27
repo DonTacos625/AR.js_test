@@ -2,6 +2,8 @@
   $lat = 35.787063624636;
   $lng = 139.67287952337;
 ?>
+
+<!doctype html>
 <html>
     <head>
         <title>AR.js A-Frame Location-based</title>
