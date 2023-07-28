@@ -1,6 +1,7 @@
 <?php 
   $lat = 35.784223110391;
   $lng = 139.67287952337;
+  $station_name = '西台駅';
 ?>
 
 <!DOCTYPE html>
@@ -125,7 +126,7 @@
             
             <a-entity 
                       click
-                      data-text="西台駅" 
+                      data-text=<?php $station_name ?>
                       look-at="[gps-new-camera]" 
                       gps-new-entity-place="latitude: 35.786166447091; longitude: 139.67492026079;" 
                       scale="10 10 10">
