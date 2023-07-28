@@ -126,7 +126,7 @@
             
             <a-entity 
                       click
-                      data-text=<?php $station_name ?>
+                      data-text=<?php echo $station_name ?>
                       look-at="[gps-new-camera]" 
                       gps-new-entity-place="latitude: 35.786166447091; longitude: 139.67492026079;" 
                       scale="10 10 10">
