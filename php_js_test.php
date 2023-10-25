@@ -120,32 +120,27 @@
       
       <div id="infobox1" class="target" value=<?php echo $row["id"]; ?>>
       <img src=<?php echo "img/". $row["id"] .".jpg" ?> alt="">
-      <p>
-        <table>
-            <!--
-            <tr>
-                <th><div><img src=<?php //echo "img/". $row["id"] .".jpg" ?> alt=""></div></th>
-                <td></td>
-            </tr>
-            -->
-            <tr>
-                <th>店舗名</th>
-                <td><?php echo $row["name"]; ?></td>
-            </tr>
-            <tr>
-                <th>営業時間</th>
-                <td><?php echo nl2br($row["open_time"]); ?></td>
-            </tr>
-            <tr>
-                <th>定休日</th>
-                <td><?php echo nl2br($row["close_time"]); ?></td>
-            </tr>
-            <tr>
-                <th>予算</th>
-                <td>昼：<?php if($row["lunch_budget"]) {echo $row["lunch_budget"];} else {echo "不明";} ?>　　夜：<?php echo $row["dinner_budget"]; ?></td>
-            </tr>
-        </table>
-      </p>
+        <div class="cf"><h3><?php echo $row["name"]; ?></h3></div>
+            <p>
+                <table>
+                    <tr>
+                        <th>店舗名</th>
+                        <td><?php echo $row["name"]; ?></td>
+                    </tr>
+                    <tr>
+                        <th>営業時間</th>
+                        <td><?php echo nl2br($row["open_time"]); ?></td>
+                    </tr>
+                    <tr>
+                        <th>定休日</th>
+                        <td><?php echo nl2br($row["close_time"]); ?></td>
+                    </tr>
+                    <tr>
+                        <th>予算</th>
+                        <td>昼：<?php if($row["lunch_budget"]) {echo $row["lunch_budget"];} else {echo "不明";} ?>　　夜：<?php echo $row["dinner_budget"]; ?></td>
+                    </tr>
+                </table>
+            </p>
       </div>
 
       <div id="target1" class="target">
