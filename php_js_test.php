@@ -167,7 +167,7 @@
       <div class="infobox" id="infobox1" value=<?php echo $row["id"]; ?>>
         <table>
             <tr>
-                <th><div id="imgbox"><img src=<?php echo "img/minatomirai/restaurants/". $row["id"] .".jpg" ?> alt=""></div></th>
+                <th><div id="imgbox"><img src=<?php echo "img/". $row["id"] .".jpg" ?> alt=""></div></th>
                 <td></td>
             </tr>
             <tr>
