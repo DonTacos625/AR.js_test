@@ -165,7 +165,7 @@
                        position="0 0 0"  
                        width="8" 
                        height="5"
-                       material="shader:html;infobox: #infobox1;"
+                       material="shader:html;target: #infobox1;"
                        look-at="[gps-new-camera]"
                        >
             </a-plane></a-entity>
