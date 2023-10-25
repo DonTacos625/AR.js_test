@@ -116,12 +116,7 @@
     </script>
     <body>
       
-      <div id="target1" class="target">
-      <img src="img/catalina.jpg" alt="A-Frame">
-      <div class="cf"><h3><?php echo $station_name ?></h3>
-      <p>A-Frameは簡単にWeb VRが実現できるフレームワークです。</p></div>
-      <p class="detail">320px × 200px</p>
-      </div>
+
       
       <div class="target" id="infobox1" value=<?php echo $row["id"]; ?>>
         <table>
@@ -146,6 +141,13 @@
                 <td>昼：<?php if($row["lunch_budget"]) {echo $row["lunch_budget"];} else {echo "不明";} ?>　　夜：<?php echo $row["dinner_budget"]; ?></td>
             </tr>
         </table>
+      </div>
+
+      <div id="target1" class="target">
+      <img src="img/catalina.jpg" alt="A-Frame">
+      <div class="cf"><h3><?php echo $station_name ?></h3>
+      <p>A-Frameは簡単にWeb VRが実現できるフレームワークです。</p></div>
+      <p class="detail">320px × 200px</p>
       </div>
 
       <div class="target" id="infobox2" value=<?php echo $row2["id"]; ?>>
