@@ -115,9 +115,7 @@
       
     </script>
     <body>
-      
-
-      
+            
       <div id="infobox1" class="target" value=<?php echo $row["id"]; ?>>
       <img src=<?php echo "img/". $row["id"] .".jpg" ?> alt="">
         <div class="cf"><h3><?php echo $row["name"]; ?></h3></div>
