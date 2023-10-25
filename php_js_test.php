@@ -157,7 +157,7 @@
         <p>test</p>
       </div>
 
-      <div class="target" id="infobox1" value=<?php echo $row["id"]; ?>>
+      <div class="info" id="infobox1" value=<?php echo $row["id"]; ?>>
         <table>
             <tr>
                 <th><div id="imgbox"><img src=<?php echo "img/". $row["id"] .".jpg" ?> alt=""></div></th>
