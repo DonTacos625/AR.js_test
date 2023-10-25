@@ -115,10 +115,7 @@
       <p>A-Frameは簡単にWeb VRが実現できるフレームワークです。</p></div>
       <p class="detail">320px × 200px</p>
       </div>
-      <div id="test">
-        <p>test</p>
-      </div>
-
+      
       <div class="target" id="infobox1" value=<?php echo $row["id"]; ?>>
         <table>
             <tr>
@@ -142,6 +139,10 @@
                 <td>昼：<?php if($row["lunch_budget"]) {echo $row["lunch_budget"];} else {echo "不明";} ?>　　夜：<?php echo $row["dinner_budget"]; ?></td>
             </tr>
         </table>
+      </div>
+
+      <div id="test">
+        <p>test</p>
       </div>
       
             <a-scene vr-mode-ui='enabled: false' arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true' cursor='rayOrigin: mouse'>
