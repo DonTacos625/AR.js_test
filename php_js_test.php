@@ -28,6 +28,15 @@
             height: 400px;
             font-size: 200%;
         }
+
+        .target>table {
+              float: left;
+              display: block;
+              width: 100%;
+              padding: 4% 0 4% 4%;
+              font-size: 50%;
+              border: solid 3px #ffffff;
+        }
 /*
         #infobox1 table {
             width: 100%;
