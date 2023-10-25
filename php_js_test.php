@@ -3,7 +3,10 @@
   $lng = 139.67287952337;
   $station_name = '西台駅';
   $spot_name = 'ピザハット';
+  $spot_name2 = 'ドン・キホーテ';
   $row = array('id' => 1, 'name' => '関内 テラス 韓国料理 マル', 'open_time' => '月～日、祝日、祝前日: 11:30～翌0:00 （料理L.O. 23:30 ドリンクL.O. 翌0:00）', 'close_time' => 'なし', 'lunch_budget' => '1001～2000円', 'dinner_budget' => '2001～3000円');
+  $row2 = array('id' => 2, 'name' => 'CELTS ケルツ 横浜関内店', 'open_time' => '月～木、日、祝日: 17:00～23:30 （料理L.O. 22:30 ドリンクL.O. 23:00）金、土、祝前日: 17:00～翌5:00 （料理L.O. 翌4:00 ドリンクL.O. 翌4:30）', 'close_time' => 'なし', 'lunch_budget' => '2001～3000円', 'dinner_budget' => '2001～3000円');
+
 ?>
 
 <!DOCTYPE html>
@@ -24,6 +27,11 @@
       
         <style>
         #infobox1 {
+            width: 640px;
+            height: 500px;
+            font-size: 200%;
+        }
+        #infobox2 {
             width: 640px;
             height: 500px;
             font-size: 200%;
@@ -140,6 +148,31 @@
         </table>
       </div>
 
+      <div class="target" id="infobox2" value=<?php echo $row2["id"]; ?>>
+        <table>
+            <tr>
+                <th><div id="imgbox"><img src=<?php echo "img/". $row2["id"] .".jpg" ?> alt=""></div></th>
+                <td></td>
+            </tr>
+            <tr>
+                <th>店舗名</th>
+                <td><?php echo $row2["name"]; ?></td>
+            </tr>
+            <tr>
+                <th>営業時間</th>
+                <td><?php echo nl2br($row2["open_time"]); ?></td>
+            </tr>
+            <tr>
+                <th>定休日</th>
+                <td><?php echo nl2br($row2["close_time"]); ?></td>
+            </tr>
+            <tr>
+                <th>予算</th>
+                <td>昼：<?php if($row2["lunch_budget"]) {echo $row2["lunch_budget"];} else {echo "不明";} ?>　　夜：<?php echo $row2["dinner_budget"]; ?></td>
+            </tr>
+        </table>
+      </div>
+
       <div id="test">
         <p>test</p>
       </div>
@@ -174,6 +207,21 @@
                        width="16" 
                        height="16"
                        material="shader:html;target: #infobox1;"
+                       look-at="[gps-new-camera]"
+                       >
+            </a-plane></a-entity>
+
+            <a-entity 
+                      click
+                      data-text=<?php echo $spot_name2 ?>
+                      look-at="[gps-new-camera]" 
+                      gps-new-entity-place="latitude: 35.7801462; longitude: 139.6903488;"
+                      scale="10 10 10">
+            <a-plane 
+                       position="0 0 0"  
+                       width="16" 
+                       height="16"
+                       material="shader:html;target: #infobox2;"
                        look-at="[gps-new-camera]"
                        >
             </a-plane></a-entity>
