@@ -163,8 +163,8 @@
                       scale="10 10 10">
             <a-plane 
                        position="0 0 0"  
-                       width="8" 
-                       height="5"
+                       width="16" 
+                       height="16"
                        material="shader:html;target: #infobox1;"
                        look-at="[gps-new-camera]"
                        >
