@@ -46,29 +46,6 @@
               border: solid 3px #ffffff;
         }
 
-        .target>table th {
-            text-align: left;
-            white-space: nowrap;
-            background: #EEEEEE;
-            width: 15vw;
-        }
-
-        .target>table td {
-            background: #EEEEEE;
-            padding: 3px;
-        }
-
-        .target>table td ul {
-            margin: 0px;
-        }
-
-        .target>table td ul li {
-            display: inline-block;
-        }
-
-        .target>table td pre {
-            white-space: pre-wrap;
-        }
         /*
         .target>table>img {
               float: left;
