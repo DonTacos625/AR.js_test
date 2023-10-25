@@ -80,18 +80,23 @@
           background-color: #FFF;
           }
 
-          
-        .target table {
-              position: absolute;
-              width: 320px;
-              height: 200px;
-              font-size: 100%;
-              background-color: #FFF;
-              display: hidden;
-              /*z-index: 1;*/
+        #detailbox {
+            position: relative;
+            float: left;
+            margin-left: 0px;
+        }
+        #detailbox #infobox1 {
+            float: left;
+            width: 75vw;
+            margin-left: 5px;
         }
 
-        .target #imgbox{
+        #detailbox #infobox1 table {
+            width: 100%;
+            border: solid 3px #ffffff;
+        }
+
+        #detailbox #infobox1 #imgbox{
             float: left;
             display: flex;
             width: 20vw;
@@ -101,34 +106,34 @@
             align-items: center;
         }
 
-        .target #imgbox img{
+        #detailbox #infobox1 #imgbox img{
             width:auto;
             height:auto;
             max-width:100%;
             max-height:100%;
         }
 
-        .target table th {
+        #detailbox #infobox1 table th {
             text-align: left;
             white-space: nowrap;
             background: #EEEEEE;
             width: 15vw;
         }
 
-        .target table td {
+        #detailbox #infobox1 table td {
             background: #EEEEEE;
             padding: 3px;
         }
 
-        .target table td ul {
+        #detailbox #infobox1 table td ul {
             margin: 0px;
         }
 
-        .target table td ul li {
+        #detailbox #infobox1 table td ul li {
             display: inline-block;
         }
 
-        .target table td pre {
+        #detailbox #infobox1 table td pre {
             white-space: pre-wrap;
         }
           
@@ -151,16 +156,17 @@
       <img src="img/catalina.jpg" alt="A-Frame">
       <div class="cf"><h3>A-Frame</h3>
       <p>A-Frameは簡単にWeb VRが実現できるフレームワークです。</p></div>
-      <p class="detail">320×640</p>
+      <p class="detail">320px × 200px</p>
       </div>
       <div id="test">
         <p>test</p>
       </div>
 
-      <div class="info" id="infobox1" value=<?php echo $row["id"]; ?>>
+      <div id="detailbox">
+      <div class="infobox" id="infobox1" value=<?php echo $row["id"]; ?>>
         <table>
             <tr>
-                <th><div id="imgbox"><img src=<?php echo "img/". $row["id"] .".jpg" ?> alt=""></div></th>
+                <th><div id="imgbox"><img src=<?php echo "img/minatomirai/restaurants/". $row["id"] .".jpg" ?> alt=""></div></th>
                 <td></td>
             </tr>
             <tr>
@@ -180,6 +186,7 @@
                 <td>昼：<?php if($row["lunch_budget"]) {echo $row["lunch_budget"];} else {echo "不明";} ?>　　夜：<?php echo $row["dinner_budget"]; ?></td>
             </tr>
         </table>
+      </div>
       </div>
       
             <a-scene vr-mode-ui='enabled: false' arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true' cursor='rayOrigin: mouse'>
@@ -201,7 +208,20 @@
             </a-plane></a-entity>
 
 
-
+           <a-entity 
+                      click
+                      data-text=<?php echo $spot_name ?>
+                      look-at="[gps-new-camera]" 
+                      gps-new-entity-place="latitude: 35.78211775; longitude: 139.6734502;"
+                      scale="10 10 10">
+            <a-plane 
+                       position="0 0 0"  
+                       width="8" 
+                       height="5"
+                       material="shader:html;infobox: #infobox1;"
+                       look-at="[gps-new-camera]"
+                       >
+            </a-plane></a-entity>
               
 
             <a-entity click data-text="西台駅" id='nishidai' material='color: blue' geometry='primitive: box' gps-new-entity-place="latitude: 35.787063624636; longitude: 139.67287952337;" scale="100 100 100"></a-entity>
