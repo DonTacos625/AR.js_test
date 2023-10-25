@@ -33,6 +33,7 @@
               float: left;
               display: block;
               width: 100%;
+              height: 120%;
               padding: 4% 0 4% 4%;
               font-size: 50%;
               border: solid 3px #ffffff;
