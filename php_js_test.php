@@ -27,7 +27,7 @@
             width: 640px;
             height: 400px;
             z-index: -10;
-            font-size: 200%;
+            font-size: 800%;
         }
 
         .target>table {
