@@ -80,17 +80,8 @@
           background-color: #FFF;
           }
 
-
-        .infobox {
-            position: absolute;
-            width: 320px;
-            height: 200px;
-            font-size: 100%;
-            background-color: #FFF;
-            display: hidden;
-        }
-
-        .infobox table {
+          
+        .target table {
               padding: 3% 0;
               text-align: center;
               width: 92%;
@@ -99,7 +90,7 @@
               margin: 4%;
         }
 
-        .infobox #imgbox{
+        .target #imgbox{
             float: left;
             display: flex;
             width: 20vw;
@@ -109,34 +100,34 @@
             align-items: center;
         }
 
-        .infobox #imgbox img{
+        .target #imgbox img{
               float: left;
               display: block;
               width: 32%;
               padding: 4% 0 4% 4%;
         }
 
-        .infobox table th {
+        .target table th {
             text-align: left;
             white-space: nowrap;
             background: #EEEEEE;
             width: 15vw;
         }
 
-        .infobox table td {
+        .target table td {
             background: #EEEEEE;
             padding: 3px;
         }
 
-        .infobox table td ul {
+        .target table td ul {
             margin: 0px;
         }
 
-        .infobox table td ul li {
+        .target table td ul li {
             display: inline-block;
         }
 
-        .infobox table td pre {
+        .target table td pre {
             white-space: pre-wrap;
         }
           
@@ -165,7 +156,7 @@
         <p>test</p>
       </div>
 
-      <div class="infobox" id="infobox1" value=<?php echo $row["id"]; ?>>
+      <div class="target" id="infobox1" value=<?php echo $row["id"]; ?>>
         <table>
             <tr>
                 <th><div id="imgbox"><img src=<?php echo "img/". $row["id"] .".jpg" ?> alt=""></div></th>
@@ -219,7 +210,7 @@
                        position="0 0 0"  
                        width="8" 
                        height="5"
-                       material="shader:html;infobox: #infobox1;"
+                       material="shader:html;target: #infobox1;"
                        look-at="[gps-new-camera]"
                        >
             </a-plane></a-entity>
