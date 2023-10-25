@@ -81,23 +81,24 @@
           }
 
 
-        #detailbox {
-            position: relative;
-            float: left;
-            margin-left: 0px;
-        }
-        #detailbox #infobox1 {
-            float: left;
-            width: 75vw;
-            margin-left: 5px;
+        #infobox1 {
+            position: absolute;
+            width: 320px;
+            height: 200px;
+            font-size: 100%;
+            background-color: #FFF;
+            display: hidden;
         }
 
-        #detailbox #infobox1 table {
+        #infobox1 table {
+            margin-left: 36%;
+            padding: 4%;
+          
             width: 100%;
             border: solid 3px #ffffff;
         }
 
-        #detailbox #infobox1 #imgbox{
+        #infobox1 #imgbox{
             float: left;
             display: flex;
             width: 20vw;
@@ -107,34 +108,34 @@
             align-items: center;
         }
 
-        #detailbox #infobox1 #imgbox img{
+        #infobox1 #imgbox img{
             width:auto;
             height:auto;
             max-width:100%;
             max-height:100%;
         }
 
-        #detailbox #infobox1 table th {
+        #infobox1 table th {
             text-align: left;
             white-space: nowrap;
             background: #EEEEEE;
             width: 15vw;
         }
 
-        #detailbox #infobox1 table td {
+        #infobox1 table td {
             background: #EEEEEE;
             padding: 3px;
         }
 
-        #detailbox #infobox1 table td ul {
+        #infobox1 table td ul {
             margin: 0px;
         }
 
-        #detailbox #infobox1 table td ul li {
+        #infobox1 table td ul li {
             display: inline-block;
         }
 
-        #detailbox #infobox1 table td pre {
+        #infobox1 table td pre {
             white-space: pre-wrap;
         }
           
@@ -163,7 +164,6 @@
         <p>test</p>
       </div>
 
-      <div id="detailbox">
       <div class="infobox" id="infobox1" value=<?php echo $row["id"]; ?>>
         <table>
             <tr>
@@ -187,7 +187,6 @@
                 <td>昼：<?php if($row["lunch_budget"]) {echo $row["lunch_budget"];} else {echo "不明";} ?>　　夜：<?php echo $row["dinner_budget"]; ?></td>
             </tr>
         </table>
-      </div>
       </div>
       
             <a-scene vr-mode-ui='enabled: false' arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true' cursor='rayOrigin: mouse'>
