@@ -25,7 +25,7 @@
         <style>
         #infobox1 {
             width: 640px;
-            height: 450px;
+            height: 500px;
             font-size: 200%;
         }
 
