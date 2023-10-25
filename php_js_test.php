@@ -26,6 +26,7 @@
         #infobox1 {
             width: 640px;
             height: 400px;
+            z-index: -50;
             font-size: 200%;
         }
 
