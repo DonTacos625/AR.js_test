@@ -250,6 +250,19 @@
 
               <a-entity 
                       look-at="[gps-new-camera]"
+                      gps-new-entity-place="latitude: 35.78211775; longitude: 139.6734502;"
+                      scale="50 50 50"
+                      ><a-image
+                        src="img/1.jpg"
+                        height="2"
+                        look-at="[gps-new-camera]"
+                        width="2"
+                        position="0 3 0"
+                        >
+              </a-image></a-entity>
+              
+              <a-entity 
+                      look-at="[gps-new-camera]"
                       gps-new-entity-place="latitude: 35.7801462; longitude: 139.6903488;"
                       scale="50 50 50"
                       ><a-image
