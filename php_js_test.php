@@ -257,7 +257,7 @@
                         height="2"
                         look-at="[gps-new-camera]"
                         width="2"
-                        position="0 3 0"
+                        position="0 1 0"
                         >
               </a-image></a-entity>
               
@@ -270,7 +270,7 @@
                         height="2"
                         look-at="[gps-new-camera]"
                         width="2"
-                        position="0 3 0"
+                        position="0 1 0"
                         >
               </a-image></a-entity>
             
