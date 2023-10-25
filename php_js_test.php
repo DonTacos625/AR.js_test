@@ -82,8 +82,13 @@
 
           
         .target table {
-            width: 100%;
-            border: solid 3px #ffffff;
+              position: absolute;
+              width: 320px;
+              height: 200px;
+              font-size: 100%;
+              background-color: #FFF;
+              display: hidden;
+              /*z-index: 1;*/
         }
 
         .target #imgbox{
