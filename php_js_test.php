@@ -38,6 +38,14 @@
               border: solid 3px #ffffff;
         }
 
+        .target>table>img {
+              float: left;
+              display: block;
+              width: 32%;
+              padding: 4% 0 4% 4%;
+          }
+
+
         /*
         #infobox1 table {
             width: 100%;
