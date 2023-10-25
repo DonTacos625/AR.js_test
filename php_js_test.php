@@ -201,20 +201,7 @@
             </a-plane></a-entity>
 
 
-           <a-entity 
-                      click
-                      data-text=<?php echo $spot_name ?>
-                      look-at="[gps-new-camera]" 
-                      gps-new-entity-place="latitude: 35.78211775; longitude: 139.6734502;"
-                      scale="10 10 10">
-            <a-plane 
-                       position="0 0 0"  
-                       width="8" 
-                       height="5"
-                       material="shader:html;info: #infobox1;"
-                       look-at="[gps-new-camera]"
-                       >
-            </a-plane></a-entity>
+
               
 
             <a-entity click data-text="西台駅" id='nishidai' material='color: blue' geometry='primitive: box' gps-new-entity-place="latitude: 35.787063624636; longitude: 139.67287952337;" scale="100 100 100"></a-entity>
