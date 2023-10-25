@@ -24,9 +24,9 @@
       
         <style>
         #infobox1 {
-            float: left;
-            width: 75vw;
-            margin-left: 5px;
+            width: 640px;
+            height: 400px;
+            font-size: 200%;
         }
 
         #infobox1 table {
