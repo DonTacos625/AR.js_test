@@ -33,7 +33,7 @@
               font-size: 100%;
               background-color: #FFF;
               display: hidden;
-              z-index: 1;
+              /*z-index: 1;*/
           }
 
           .target>img {
