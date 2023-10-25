@@ -158,7 +158,7 @@
       <img src="img/catalina.jpg" alt="A-Frame">
       <div class="cf"><h3>A-Frame</h3>
       <p>A-Frameは簡単にWeb VRが実現できるフレームワークです。</p></div>
-      <p class="detail">320px × 200px</p>
+      <p class="detail"><?php echo $row["id"]; ?></p>
       </div>
       <div id="test">
         <p>test</p>
@@ -218,7 +218,7 @@
                        position="0 0 0"  
                        width="8" 
                        height="5"
-                       material="shader:html;target: #target1;"
+                       material="shader:html;infobox: #infobox1;"
                        look-at="[gps-new-camera]"
                        >
             </a-plane></a-entity>
