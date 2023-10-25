@@ -255,7 +255,7 @@
                       gps-new-entity-place="latitude: 35.7801462; longitude: 139.6903488;"
                       scale="40 40 40"
                       ><a-image
-                        src="https://cdn.glitch.global/3acb31b7-c45b-47f0-8eb6-beb5723e638a/uec_mark.png?v=1687853300605"
+                        src="img/2.jpg"
                         height="2"
                         look-at="[gps-new-camera]"
                         width="2"
