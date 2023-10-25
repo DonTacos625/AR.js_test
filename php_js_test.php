@@ -97,7 +97,7 @@
       
       <div id="target1" class="target">
       <img src="img/catalina.jpg" alt="A-Frame">
-      <div class="cf"><h3>A-Frame</h3>
+      <div class="cf"><h3><?php echo $station_name ?></h3>
       <p>A-Frameは簡単にWeb VRが実現できるフレームワークです。</p></div>
       <p class="detail">320px × 200px</p>
       </div>
