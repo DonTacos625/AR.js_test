@@ -218,7 +218,7 @@
                       data-text=<?php echo $spot_name2 ?>
                       look-at="[gps-new-camera]" 
                       gps-new-entity-place="latitude: 35.7801462; longitude: 139.6903488;"
-                      scale="10 10 10">
+                      scale="50 50 50">
             <a-plane 
                        position="0 0 0"  
                        width="16" 
@@ -253,13 +253,13 @@
               <a-entity 
                       look-at="[gps-new-camera]"
                       gps-new-entity-place="latitude: 35.7801462; longitude: 139.6903488;"
-                      scale="40 40 40"
+                      scale="50 50 50"
                       ><a-image
                         src="img/2.jpg"
                         height="2"
                         look-at="[gps-new-camera]"
                         width="2"
-                        position="0 5 0"
+                        position="0 3 0"
                         >
               </a-image></a-entity>
             
