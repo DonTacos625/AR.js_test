@@ -46,6 +46,29 @@
               border: solid 3px #ffffff;
         }
 
+        .target>table th {
+            text-align: left;
+            white-space: nowrap;
+            background: #EEEEEE;
+            width: 15vw;
+        }
+
+        .target>table td {
+            background: #EEEEEE;
+            padding: 3px;
+        }
+
+        .target>table td ul {
+            margin: 0px;
+        }
+
+        .target>table td ul li {
+            display: inline-block;
+        }
+
+        .target>table td pre {
+            white-space: pre-wrap;
+        }
         /*
         .target>table>img {
               float: left;
@@ -118,12 +141,16 @@
       
 
       
-      <div class="target" id="infobox1" value=<?php echo $row["id"]; ?>>
+      <div id="infobox1" class="target" value=<?php echo $row["id"]; ?>>
+      <img src=<?php echo "img/". $row["id"] .".jpg" ?> alt="">
+      <p>
         <table>
+            <!--
             <tr>
-                <th><div id="imgbox"><img src=<?php echo "img/". $row["id"] .".jpg" ?> alt=""></div></th>
+                <th><div><img src=<?php //echo "img/". $row["id"] .".jpg" ?> alt=""></div></th>
                 <td></td>
             </tr>
+            -->
             <tr>
                 <th>店舗名</th>
                 <td><?php echo $row["name"]; ?></td>
@@ -141,6 +168,7 @@
                 <td>昼：<?php if($row["lunch_budget"]) {echo $row["lunch_budget"];} else {echo "不明";} ?>　　夜：<?php echo $row["dinner_budget"]; ?></td>
             </tr>
         </table>
+      </p>
       </div>
 
       <div id="target1" class="target">
