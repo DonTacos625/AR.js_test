@@ -249,6 +249,19 @@
                         position="0 -2 0"
                         >
               </a-image></a-entity>
+
+              <a-entity 
+                      look-at="[gps-new-camera]"
+                      gps-new-entity-place="latitude: 35.7801462; longitude: 139.6903488;"
+                      scale="40 40 40"
+                      ><a-image
+                        src="https://cdn.glitch.global/3acb31b7-c45b-47f0-8eb6-beb5723e638a/uec_mark.png?v=1687853300605"
+                        height="2"
+                        look-at="[gps-new-camera]"
+                        width="2"
+                        position="0 5 0"
+                        >
+              </a-image></a-entity>
             
             <a-entity click data-text="深大寺" material='color: red' geometry='primitive: sphere' gps-new-entity-place="latitude: 35.6686838; longitude: 139.5418261;" scale="100 100 100"></a-entity>
             <a-entity click data-text="電通大" material='color: green' geometry='primitive: sphere' gps-new-entity-place="latitude: 35.6577007; longitude: 139.5465039;" scale="100 100 100"></a-entity>
