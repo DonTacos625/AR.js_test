@@ -82,12 +82,8 @@
 
           
         .target table {
-              padding: 3% 0;
-              text-align: center;
-              width: 92%;
-              color: #fff;
-              background-color: rgba(1, 1, 1, 0.6);
-              margin: 4%;
+            width: 100%;
+            border: solid 3px #ffffff;
         }
 
         .target #imgbox{
@@ -101,10 +97,10 @@
         }
 
         .target #imgbox img{
-              float: left;
-              display: block;
-              width: 32%;
-              padding: 4% 0 4% 4%;
+            width:auto;
+            height:auto;
+            max-width:100%;
+            max-height:100%;
         }
 
         .target table th {
