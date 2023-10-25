@@ -2,6 +2,8 @@
   $lat = 35.784223110391;
   $lng = 139.67287952337;
   $station_name = '西台駅';
+  $spot_name = 'ピザハット';
+  $row = array('id' => 1, 'name' => '関内 テラス 韓国料理 マル', 'open_time' => '月～日、祝日、祝前日: 11:30～翌0:00 （料理L.O. 23:30 ドリンクL.O. 翌0:00）', 'close_time' => 'なし', 'lunch_budget' => '1001～2000円', 'dinner_budget' => '2001～3000円');
 ?>
 
 <!DOCTYPE html>
@@ -19,11 +21,10 @@
       
         <script src="js/html2canvas.min.js"></script>
         <style>
-                    * {
+          * {
               margin: 0;
               padding: 0;
           }
-
           #loader {
               width: 100%;
               height: 100%;
@@ -32,7 +33,6 @@
               background-color: #333;
               color: #fff;
           }
-
           #loader>p {
               position: absolute;
               top: 50%;
@@ -42,11 +42,9 @@
               font-size: 200%;
               font-weight: bold;
           }
-
           #loader.hidden {
               display: none;
           }
-
           .target {
               position: absolute;
               width: 320px;
@@ -56,20 +54,17 @@
               display: hidden;
               /*z-index: 1;*/
           }
-
           .target>img {
               float: left;
               display: block;
               width: 32%;
               padding: 4% 0 4% 4%;
           }
-
           .target>div {
               margin-left: 36%;
               width: 52%;
               padding: 4%;
           }
-
           .target>.detail {
               padding: 3% 0;
               text-align: center;
@@ -84,6 +79,65 @@
           z-index: -50;
           background-color: #FFF;
           }
+
+
+        #detailbox {
+            position: relative;
+            float: left;
+            margin-left: 0px;
+        }
+        #detailbox #infobox1 {
+            float: left;
+            width: 75vw;
+            margin-left: 5px;
+        }
+
+        #detailbox #infobox1 table {
+            width: 100%;
+            border: solid 3px #ffffff;
+        }
+
+        #detailbox #infobox1 #imgbox{
+            float: left;
+            display: flex;
+            width: 20vw;
+            height: 15vw;
+            margin-bottom: 15px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #detailbox #infobox1 #imgbox img{
+            width:auto;
+            height:auto;
+            max-width:100%;
+            max-height:100%;
+        }
+
+        #detailbox #infobox1 table th {
+            text-align: left;
+            white-space: nowrap;
+            background: #EEEEEE;
+            width: 15vw;
+        }
+
+        #detailbox #infobox1 table td {
+            background: #EEEEEE;
+            padding: 3px;
+        }
+
+        #detailbox #infobox1 table td ul {
+            margin: 0px;
+        }
+
+        #detailbox #infobox1 table td ul li {
+            display: inline-block;
+        }
+
+        #detailbox #infobox1 table td pre {
+            white-space: pre-wrap;
+        }
+          
         </style>
 
     </head>
@@ -96,18 +150,6 @@
                 });
         }});
       
-        AFRAME.registerComponent('clicktakashima', {
-            init: function() {
-                this.el.addEventListener('click', () => {
-                    alert('高島平駅です！')
-                });
-        }});
-        AFRAME.registerComponent('clickhandler', {
-            init: function() {
-                this.el.addEventListener('click', () => {
-                    alert('調布駅です！')
-                });
-        }});
     </script>
     <body>
       
@@ -119,6 +161,33 @@
       </div>
       <div id="test">
         <p>test</p>
+      </div>
+
+      <div id="detailbox">
+      <div class="infobox" id="infobox1" value=<?php echo $row["id"]; ?>>
+        <table>
+            <tr>
+                <th><div id="imgbox"><img src=<?php echo "img/minatomirai/restaurants/". $row["id"] .".jpg" ?> alt=""></div></th>
+                <td></td>
+            </tr>
+            <tr>
+                <th>店舗名</th>
+                <td><?php echo $row["name"]; ?></td>
+            </tr>
+            <tr>
+                <th>営業時間</th>
+                <td><?php echo nl2br($row["open_time"]); ?></td>
+            </tr>
+            <tr>
+                <th>定休日</th>
+                <td><?php echo nl2br($row["close_time"]); ?></td>
+            </tr>
+            <tr>
+                <th>予算</th>
+                <td>昼：<?php if($row["lunch_budget"]) {echo $row["lunch_budget"];} else {echo "不明";} ?>　　夜：<?php echo $row["dinner_budget"]; ?></td>
+            </tr>
+        </table>
+      </div>
       </div>
       
             <a-scene vr-mode-ui='enabled: false' arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true' cursor='rayOrigin: mouse'>
@@ -135,6 +204,22 @@
                        width="8" 
                        height="5"
                        material="shader:html;target: #target1;"
+                       look-at="[gps-new-camera]"
+                       >
+            </a-plane></a-entity>
+
+
+           <a-entity 
+                      click
+                      data-text=<?php echo $spot_name ?>
+                      look-at="[gps-new-camera]" 
+                      gps-new-entity-place="latitude: 35.78211775; longitude: 139.6734502;"
+                      scale="10 10 10">
+            <a-plane 
+                       position="0 0 0"  
+                       width="8" 
+                       height="5"
+                       material="shader:html;infobox: #infobox1;"
                        look-at="[gps-new-camera]"
                        >
             </a-plane></a-entity>
