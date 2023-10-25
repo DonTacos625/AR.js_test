@@ -28,7 +28,7 @@
             height: 400px;
             font-size: 200%;
         }
-
+/*
         #infobox1 table {
             width: 100%;
             border: solid 3px #ffffff;
@@ -74,6 +74,7 @@
         #infobox1 table td pre {
             white-space: pre-wrap;
         }
+*/
           
         </style>
 
