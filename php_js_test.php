@@ -81,7 +81,7 @@
           }
 
 
-        #infobox1 {
+        .infobox {
             position: absolute;
             width: 320px;
             height: 200px;
@@ -90,7 +90,7 @@
             display: hidden;
         }
 
-        #infobox1 table {
+        .infobox table {
             margin-left: 36%;
             padding: 4%;
           
@@ -98,7 +98,7 @@
             border: solid 3px #ffffff;
         }
 
-        #infobox1 #imgbox{
+        .infobox #imgbox{
             float: left;
             display: flex;
             width: 20vw;
@@ -108,34 +108,34 @@
             align-items: center;
         }
 
-        #infobox1 #imgbox img{
+        .infobox #imgbox img{
             width:auto;
             height:auto;
             max-width:100%;
             max-height:100%;
         }
 
-        #infobox1 table th {
+        .infobox table th {
             text-align: left;
             white-space: nowrap;
             background: #EEEEEE;
             width: 15vw;
         }
 
-        #infobox1 table td {
+        .infobox table td {
             background: #EEEEEE;
             padding: 3px;
         }
 
-        #infobox1 table td ul {
+        .infobox table td ul {
             margin: 0px;
         }
 
-        #infobox1 table td ul li {
+        .infobox table td ul li {
             display: inline-block;
         }
 
-        #infobox1 table td pre {
+        .infobox table td pre {
             white-space: pre-wrap;
         }
           
@@ -158,7 +158,7 @@
       <img src="img/catalina.jpg" alt="A-Frame">
       <div class="cf"><h3>A-Frame</h3>
       <p>A-Frameは簡単にWeb VRが実現できるフレームワークです。</p></div>
-      <p class="detail"><?php echo $row["id"]; ?></p>
+      <p class="detail">320×640</p>
       </div>
       <div id="test">
         <p>test</p>
